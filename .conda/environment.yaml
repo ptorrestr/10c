@@ -1,0 +1,9 @@
+name: 10c
+channels:
+  - ptorrestr
+  - conda-forge
+dependencies:
+  - python
+  - setuptools
+  - zlib
+  - pytest

@@ -1,0 +1,25 @@
+package:
+  name: 10c
+  version: {{ GIT_DESCRIBE_TAG }}
+build:
+  number: {{ GIT_DESCRIBE_NUMBER }}
+source:
+  path: ../
+requirements:
+  build:
+    - python
+    - setuptools
+    - zlib
+  run:
+    - python
+    - zlib
+test:
+  source_files:
+    - tests
+  requires:
+    - pytest
+  commands:
+    - pytest
+about:
+  home: https://github.com/mnick/10c
+  license: GPLv3
