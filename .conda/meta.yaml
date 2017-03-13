@@ -13,6 +13,10 @@ requirements:
   run:
     - python
     - zlib
+    - numpy
+    - scipy
+    - nltk
+    - configobj
 test:
   source_files:
     - tests
