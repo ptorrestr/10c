@@ -17,10 +17,11 @@ else
   PYTHON_V="3"
 fi
 
-ls $MINICONDA_FOLDER/bin
+ls $MINICONDA_FOLDER
 hash conda 2>/dev/null || ( \
   curl -fSL "https://${MINICONDA_BUCKET}/miniconda/Miniconda${PYTHON_V}-${MINICONDA_VERSION}-${OS}-x86_64.sh" -o miniconda.sh \
   && echo "${MINICONDA_MD5} *miniconda.sh" | md5sum -c - \
+  && rm -rf $MINICONDA_FOLDER \
   && bash miniconda.sh -b -p $MINICONDA_FOLDER \
   && export PATH="$MINICONDA_FOLDER/bin:$PATH" \
   && hash -r \
