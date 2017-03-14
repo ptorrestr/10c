@@ -1,8 +1,19 @@
 from setuptools import setup
 
+def version():
+  out = subprocess.Popen(['git','describe','--tags'], stdout = subprocess.PIPE, universal_newlines = True)
+  out.wait()
+  if out.returncode == 0:
+    m_version = out.stdout.read().strip()
+    version = m_version.split("-")
+    if len(version) > 0:
+      print(version[0])
+      return version[0]
+  return "0.0.1" #default version
+
 setup(
     name='tenc',
-    version='0.2',
+    version=version(),
     classifiers=[
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 3'
