@@ -6,11 +6,12 @@ matrix:
   include:
     - os: linux
       python: 2.7
-      env:
-        - MINICONDA_BUCKET="repo.continuum.io"
-        - MINICONDA_VERSION="4.2.12"
-        - MINICONDA_FOLDER="$HOME/miniconda"
-        - MINICONDA_ENV_NAME="10c"
+env:
+  global:
+    - MINICONDA_BUCKET="repo.continuum.io"
+    - MINICONDA_VERSION="4.2.12"
+    - MINICONDA_FOLDER="$HOME/miniconda"
+    - MINICONDA_ENV_NAME="10c"
 before_install:
   - .travis/before_install.sh
 install:
