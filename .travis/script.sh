@@ -4,4 +4,4 @@ set -e -x
 
 export PATH="$HOME/miniconda/bin:$PATH"
 source activate $MINICONDA_ENV_NAME
-conda build -t .conda/
+conda build -t .conda/ --python $TRAVIS_PYTHON_VERSION

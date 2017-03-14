@@ -1,5 +1,5 @@
 package:
-  name: 10c
+  name: tenc
   version: {{ GIT_DESCRIBE_TAG }}
 build:
   number: {{ GIT_DESCRIBE_NUMBER }}
