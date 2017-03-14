@@ -2,17 +2,13 @@
 
 set -x -e
 
-MINICONDA_BUCKET="repo.continuum.io"
-MINICONDA_VERSION="4.2.12"
-MINICONDA_FOLDER="$HOME/miniconda"
-MINICONDA_ENV_NAME="10c"
 if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
   rvm get stable # We need this since there is a bug in osx. See https://github.com/travis-ci/travis-ci/issues/6307
   OS="MacOSX"
-  MINICONDA_MD5="d2edb7d4f3f55c35b9a25fd2d0ef6856"
+  MINICONDA_MD5="ff3d7b69e32e1e4246176fb90f8480c8"
 else
   OS="Linux"
-  MINICONDA_MD5="d573980fe3b5cdf80485add2466463f5"
+  MINICONDA_MD5="c8b836baaa4ff89192947e4b1a70b07e"
 fi
 
 if [[ "$TRAVIS_PYTHON_VERSION" == "2.7" ]]; then
