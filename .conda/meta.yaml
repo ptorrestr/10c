@@ -17,6 +17,7 @@ requirements:
     - scipy
     - nltk
     - configobj
+    - librdf-python-binding
 test:
   source_files:
     - tests

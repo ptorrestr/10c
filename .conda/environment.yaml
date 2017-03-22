@@ -10,4 +10,5 @@ dependencies:
   - scipy
   - nltk
   - configobj
+  - librdf-python-binding
   - pytest
